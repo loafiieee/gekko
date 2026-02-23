@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gekko | Stuck on Cleaning</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent-color: #00b050;
+    --bg-color: #f4f4f4;
+    --text-color: #222;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+  }
+
+  header {
+    background-color: var(--accent-color);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+
+  header img.logo {
+    width: 80px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  header p.tagline {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--accent-color);
+  }
+
+  section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  section h2 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 1rem auto;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 2rem auto;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s;
+  }
+
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature img {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .cta {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background 0.3s;
+  }
+
+  .cta:hover {
+    background-color: #008f3c;
+  }
+
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  /* Scroll animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="gekko-logo.png" alt="Gekko Logo">
+  <h1>Gekko</h1>
+  <p class="tagline">“Stuck on Cleaning”</p>
+</header>
+
+<nav>
+  <a href="#product">Product</a>
+  <a href="#features">Features</a>
+  <a href="#how-it-works">How it Works</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="product" class="fade-in">
+  <h2>Meet the Gekko: 360</h2>
+  <img class="product-image" src="gekko360.png" alt="Gekko 360 Robot">
+  <p>The Gekko: 360 is the ultimate cleaning companion. With its extendable arm and smart navigation, it cleans walls, ceilings, windows, and corners effortlessly, giving your home a deeper clean without lifting a finger.</p>
+  <a class="cta" href="#contact">Order Now</a>
+</section>
+
+<section id="features" class="fade-in">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature">
+      <img src="icons/arm.svg" alt="Extendable Arm">
+      <h3>Extendable Arm</h3>
+      <p>Reach high walls, ceilings, and corners with precision cleaning.</p>
+    </div>
+    <div class="feature">
+      <img src="icons/lidar.svg" alt="Smart Navigation">
+      <h3>Smart Navigation</h3>
+      <p>Advanced LIDAR mapping for efficient, collision-free cleaning.</p>
+    </div>
+    <div class="feature">
+      <img src="icons/selfdock.svg" alt="Self Docking">
+      <h3>Self-Docking & Emptying</h3>
+      <p>Automatically returns to its dock and empties debris after cleaning.</p>
+    </div>
+    <div class="feature">
+      <img src="icons/silent.svg" alt="Quiet Operation">
+      <h3>Quiet Operation</h3>
+      <p>Low-noise cleaning so it doesn’t disturb your home environment.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="fade-in">
+  <h2>How It Works</h2>
+  <p>Simply set the Gekko: 360 in any room, select a cleaning mode on your phone, and let it do the work. Its smart arm adapts to your surfaces, scrubbing dust, grime, and smudges while avoiding fragile objects. Once complete, it returns to its dock and prepares for the next cleaning session.</p>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Get Yours Today</h2>
+  <p>Transform your home cleaning routine. Order the Gekko: 360 and experience a truly hands-free clean.</p>
+  <a class="cta" href="mailto:sales@gekko.com">Contact Sales</a>
+</section>
+
+<footer>
+  &copy; 2026 Gekko. All rights reserved.
+</footer>
+
+<script>
+  // Simple scroll animation
+  const faders = document.querySelectorAll('.fade-in');
+  const options = { threshold: 0.2 };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  faders.forEach(fader => observer.observe(fader));
+</script>
+
+</body>
+</html>
